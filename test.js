@@ -1,8 +1,8 @@
 // const numbers = [1, 2, 3, 4, 5];
  
 // const output = numbers.map(number => {
-//     if(number %2 == 1){
-//         return number * 100
+//     if(number %2 == 0){
+//         return 1 
 //     }
 //     return number
 // });
@@ -10,17 +10,6 @@
 
 
 
-
-
-// const numbers = [1, 2, 3, 4, 5];
-
-// const output = numbers.map(number => {
-//     if(number %2 == 0){
-//         return number * 100;
-//     }
-//         return number * 10;
-// });
-// console.log(output);
 
 
 
@@ -139,8 +128,6 @@
 
 
 
-
-
 // const input = [{name : 'Raju', age : 26, location : 'Dubai'},
 //                {name : 'khushboo', age : 23, location : 'Dubai'},
 //                {name : 'Roshan', age : 19, location : 'india'},
@@ -171,9 +158,6 @@
 
 
 
-
-
-
 // const input = [{type : 'Dms', today : 'true', valve : 'Approve'},
 //                {type : 'Abc', today : 'false', valve : 'Rej'},
 //                {type : 'wore', today : 'false', valve : 'wore'}];
@@ -181,12 +165,11 @@
 // let output = {
 //     history : [],
 //     today : [],
-// };
+// }
 
 // input.map(sum => {
 //     if(sum.today == 'false'){
 //        output.history.push(sum);
-//         console.log(output);
 
 //     } else {
         
@@ -200,47 +183,21 @@
 
 
 
-
-
 // const input = [{item : 'maggie', type : 'snack', price : 10},
 //                {item : 'atta', type : 'grocery', price : 20},
-//                {item : 'milk', type : 'grocery', price : 20}];
+//                {item : 'milk', type : 'grocery', price : 30}];
 
+// let output = {} 
 
-// const output = {
-//     snack : 0,
-//     grocery : 0,
-// };
 // input.map(obj => {
-//     if(obj.type == 'grocery'){
-//         output.grocery = obj.price + obj.price
+//     if(output[obj.type]){
+//         output[obj.type] = output[obj.type] + obj.price
 //     } else {
-//         output.snack = obj.price
+//       output[obj.type] = obj.price  
 //     }
+  
 // });
-// console.log(output);
-
-
-
-
-
-
-// const input = [{item : 'maggie', type : 'snack', price : 10},
-//                {item : 'atta', type : 'grocery', price : 20},
-//                {item : 'milk', type : 'grocery', price : 20}];
-
-
-// const output = {};
-// input.map(sum => {
-//     if(sum.type == 'grocery'){
-//         output[sum.type] = sum.price + sum.price
-//     } else { 
-//         output[sum.type] = sum.price
-//     }
-// });
-// console.log(output);
-
- 
+//     console.log(output);
 
 
 
@@ -264,43 +221,27 @@
 
 
 
-
-
-
 // const input = [
 //             {
 //                 name: 'khushboo',
 //                 occupation: {
 //                     designation: 'softwareEngineer',
-//                     location: 'india',
-//                     salary: 50000
+//                     location:{
+//                     mycity: 'delhi',
+//                     age: 18
+//                     }
 //                 }
 //             },
 //             {
 //                 name: 'Raju',
 //                 occupation:{
 //                     designation: 'softwareEngineer',
-//                     location: 'Dubai',
+//                     location:{
+//                     mycity: 'Dubai',
 //                     slary: 25000
+//                     }
 //                 }
 //             }];
-// const output = input.filter(obj => {
-//     if(obj.occupation.salary > 25000){
-//         return true;
-//     }
-//     return false;
-// }).map(sum => {
-//     return {
-//         name: sum.name,
-//         location: sum.occupation.location,
-//         salary: sum.occupation.location,
-//         designation: sum.occupation.designation
-//     }
-// })
-// console.log(output);                    
-
-
-
 
 
 
@@ -320,8 +261,7 @@
 //                {name : 'khushboo', gender : 'female'},
 //                {name : 'Arya', gender : 'female'}];
 
-
-// const output = {};
+// let output = {};
 // input.map(obj => {
 // output[obj.name] = 'kumar sharma'
 
@@ -332,23 +272,84 @@
 
 
 
+// const input = [{item : 'maggie', type : 'snack', price : 10},
+//                {item : 'atta', type : 'grocery', price : 20},
+//                {item : 'milk', type : 'grocery', price : 30}];
+
+// let output = {}
+
+// input.map(obj => {
+//     if(output[obj.type]){
+//         output[obj.type] = output[obj.type] + obj.price
+//     } else {
+//       output[obj.type] = obj.price  
+//     }
+  
+// });
+//     console.log(output);
 
 
-// const input = [{name: 'Raju', age: 26, location: 'Dubai'},
+
+
+
+
+
+
+
+
+// const input = [
+//                 {name: 'Raju', age: 26, location: 'Dubai'},
 //                {name: 'Roshan', age: 21, location: 'india'},           
-//                {name: 'khushboo', age: 23, location: 'Dubai'}];
+//                {name: 'khushboo', age: 23, location: 'Dubai'}
+//             ];
 
+// const sampleOutput = {
+//     Dubai: ['Raju', 'Khushboo'],
+//     india: ['Roshan']
+// }
 
 // const output = {};
 
-// input.map(obj => {
-//     if(output[obj.location]){
-//     output[obj.location] = [...output[obj.location],obj.name];
+// input.map(person => {
+//     if(output[person.location]){
+//         output[person.location] = [...output[person.location], person.name]
 //     } else {
-//     output[obj.location] = [obj.name];
+//         output[person.location] = [person.name];
 //     }
 // });
-// console.log(output); 
+
+// console.log(output);
+
+
+
+// const oldValue = ['Raju']
+// const newValue = [...oldValue, 'Khushboo']
+
+
+
+
+
+
+
+
+
+
+// const input = [{firstName: 'khushboo'}, {firstName: 'Raju'}];
+
+//  const output = input.map((obj) => {
+//     obj.lastName = 'sharma'
+//     return obj
+
+// });
+// console.log(output);
+
+
+
+
+
+
+
+
 
 
 
@@ -431,9 +432,13 @@
 
 
 
-                                                // reverse String
+                                
 
-// let input = 'khushboo';
+
+                                                // check if string is palindrome    
+
+
+// const input = 'khushboo';
 
 // let palindrome = input.split('').reverse().join('');
 
@@ -447,10 +452,9 @@
 
 
 
-                                                   // check if string is palindrome    
+                                                   
 
-
-// let input = ['khushboo', 'radar', 'Arya', 'level'];
+// const input = ['khushboo', 'radar', 'Arya', 'level'];
 
 // let output = input.map(sum => {
 //     let str = sum.split('').reverse().join('');
@@ -491,7 +495,7 @@
 
 // const input = 'my name is Raju';
 
-// let substring = ['khushboo', 'name', 'Raju', 'sum'];
+// const substring = ['khushboo', 'name', 'Raju', 'sum'];
 
 // substring.map(str => {
 //     if(input.includes(str)){
@@ -510,7 +514,7 @@
 
 
 
-// let input = [1, 2, 2, 3, 5, 3, 3, 4, 1 ];
+// const input = [1, 2, 2, 3, 5, 3, 3, 4, 1 ];
 
 
 // let realNumbers = [];
@@ -531,7 +535,7 @@
 
 
 
-// let input = [1, 2, 2, 3, 5, 3, 3, 4, 1 ];
+// const input = [1, 2, 2, 3, 5, 3, 3, 4, 1 ];
 
 // let duplicates = [];
 // let realNumbers = [];
@@ -556,9 +560,6 @@
 
 // let output = input.reverse();
 //     console.log(output);
-
-
-
 
 
 
@@ -598,19 +599,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const sum = [1, 2, 2, 3];
 
 // let num = new Set(sum)
@@ -627,45 +615,10 @@
 
 
 
-
-
-// let detabase = [];
-
-// let addPerson = (person) =>{
-//     detabase.push(person)
-//     console.log('push kar diya')
-// }
-// addPerson({name : 'khushboo',
-            
-//        location  : 'Dubai'})
-
-// console.log(detabase);
-
-
-// let getPerson = (nam) => {
-//     detabase.find(sum => { 
-//         if(sum.name == nam){
-//             return true
-//         }
-//             return false
-//     })
-
-// }
-// getPerson('khushboo')
-// console.log(detabase)
-
-
-
-
-
-
-
-
 // const add = (num1, num2 )=> {
 //     return num1 + num2  
 // };
-//  const output =   add(5, 6)
-// console.log(output);
+// console.log( add(5, 6) );
  
 
 
@@ -733,21 +686,16 @@
 
                                             // setTimeout & setInterval
 
-
-    // function sum(name){
-    //     console.log("my name is khushboo");
-
-    // }
-    //   id = setTimeout(sum, 2000, 'name');
-    // clearTimeout(id);
+    
 
 
+    function sum(){
+        console.log("khushboo");  
+    };
+    id = setInterval(sum, 5000, "name, person")
+ clearInterval(id) 
 
-//     function sum(){
-//         console.log("khushboo");  
-//     };
-//     id = setInterval(sum, 5000, "name, person")
-//  clearInterval(id) 
+
 
 
 
@@ -759,10 +707,14 @@
 
 
  
+
 // function myBabyName(name){
 //     console.log("my baby name is Alisha")
 // };
 //     setTimeout(myBabyName, 2000, "name")
+
+
+
 
 
 
@@ -772,6 +724,8 @@
 // };
 //    id = setInterval(MyFamily, 5000);
     
+
+
 
 
 
@@ -839,16 +793,198 @@
 
 
 
+// const input = {name: 'khushboo', location: {country: 'Dubai'}};
+// const {name, location: {country}} = input;
+// console.log(name, country)
+
+
+
+// const age = 26;
+// const name = `Raju ${age}`;
+// console.log(`My name is ${name}`);
+
+
+
+// const sum = {nam: 'khushboo', person: {name: 'Raju'}};
+// const {nam, person: {name}} = sum;
+//     console.log(nam, name);
 
 
 
 
 
-const input = [4, 5, 7, 8, 9, 4];
 
-let output = 0
- let sum = input.map(number => {
-     output = number + output
-     
-});
-console.log(output);
+
+
+
+
+// const input1 = [1, 2, 3, 4, 5]; 
+// const input2 = [4, 5, 6, 7, 8];
+
+// const number = 4;
+
+// if(input1.includes(number) && input2.includes(number)){
+//     console.log('dono me h')
+// } else if(input1.includes(number)){
+//     console.log('1 me h')
+// } else if(input2.includes(number)){
+//     console.log('2 me h')
+// } else{
+//     console.log('kisi me nami h')
+// }
+
+
+
+
+
+
+
+
+
+
+// const sum = () =>  {
+//     return 'khushboo'
+// };
+//  const result = sum();
+// console.log(result)
+
+
+
+
+
+
+
+
+
+// const array = [1,2,3,4,5]
+
+// const newArray = [...array,6,7,8,9,10]
+
+
+
+
+
+// const object = {
+//     name: 'Raju',
+//     age: 26
+// }
+
+// const newObject = {
+//     ...object,
+//     lastName: 'Sharma'
+// }
+
+// console.log(newObject);
+
+
+
+
+
+
+
+
+// const input = [{name : 'Raju', age : 26, location : 'Dubai'},
+//                {name : 'khushboo', age : 23, location : 'Dubai'},
+//                {name : 'Roshan', age : 19, location : 'india'},
+//                {name : 'Arya', age : 2, location : 'Dubai'}];
+
+// let output = {
+//     above20 : [],
+//     below20 : [],
+// };
+
+// input.map(obj => {
+//     if(obj.age > 20){
+// output.above20 = [...output.above20,{
+//         name : obj.name,
+//         location: obj.location
+// }]
+//     } else {
+// output.below20 = [...output.below20,{name: obj.name,
+//                     location: obj.location}];        
+//     }
+// })
+//     console.log(output);
+
+
+
+
+
+
+
+
+
+// const num = 24;
+
+// let prime = true;
+// for(let i = 2; i <= num - 1; i++){
+//     let sum = num % i
+//     if(sum == 0){
+//         prime = false;
+//         console.log('prime nahi hai, ', i, ' se divide ho gaya')
+//         break;
+//     }
+// }
+// if(prime == true){
+//     console.log('prime ,h')
+// }
+
+
+
+
+
+
+
+
+// let obj = {names : ['Raju', 'khushboo', 'Arya', 'Alish'],reversName : []};
+
+
+// obj.names.map(str => {
+// let count = str.split('').reverse().join('');
+// obj.reversName.push(count);
+// });
+// console.log(obj);
+
+
+
+
+
+// let number = 21
+ 
+// let prime = true;
+// for(let i = 2; i <= number-1; i++){
+//     let num = number % i;
+//     if(num == 0){
+//         prime = false
+//     console.log('prime nahi h')
+//     break;
+//     }
+//         };
+//     if(prime == true){
+//     console.log('prime h')
+//     };
+
+
+
+
+
+
+
+                                          // File read,write,delete
+
+// const fs = require('fs');
+
+// fs.writeFileSync('khushboo.js', 'hello!');
+
+
+
+
+// var fs = require('fs');
+// var buffer = fs.readFileSync("test2.js", 'utf-8');
+// console.log(buffer)
+
+
+
+
+// var fs = require('fs');
+// fs.unlinkSync('khushboo.js');
